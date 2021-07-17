@@ -193,8 +193,9 @@
     <script>
         function today() {
             var d = new Date();
-            var num = d.getDay()
-            const vars = {'1':'Monday', '2':'Tuesday','3':'Wednesday', '4':'Thrusday','5':'Friday', '6':'Saturday','7':'Sunday'};
+            var num = d.getDay();
+            //console.log(num);
+            const vars = {'1':'Monday', '2':'Tuesday','3':'Wednesday', '4':'Thrusday','5':'Friday', '6':'Saturday','0':'Sunday'};
             document.getElementById("demo").innerHTML = vars[num];
         }
         today();
@@ -221,7 +222,7 @@
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
+        });
         var preload = document.getElementsByClassName("loader")[0];
         function loadingFunc(){
             preload.style.display = 'none';
