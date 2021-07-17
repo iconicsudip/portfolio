@@ -5,20 +5,29 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="Warm welcome to you to visit my portfolio">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="loader.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <title>Hello, world!</title>
+    <link rel="icon" href="images/face-r.png" >
+    <title>Sudip Das - Portfolio</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class='loader' style="display: none;">
+        <div class='circle'></div>
+        <div class='circle'></div>
+        <div class='circle'></div>
+        <div class='circle'></div>
+        <div class='circle'></div>
+    </div>
+      
+    <div class="container" >
         <h1 class="start">Start</h1>
         <div class="icon">
             <div style="width: 100%;
@@ -35,58 +44,112 @@
             display: flex;
             justify-content: center;
             align-items: center;">
-                <img class="logoimg" src="images/face-r.png" alt="">
+                <i class="fas fa-cog" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click on me to change settings"><img class="logoimg" src="images/face-r.png" alt=""></i>
             </div>
         </div>
         <div class="container-gallery">
-            <div class="big" style="background: url(images/img7.png);background-size: contain;background-position: center;">
+            <div class="scale big" style="background: url(images/img7.png);background-size: contain;background-position: center;">
                 <img class="fadeimg" src="images/img3.png" alt="">
             </div>
-            <div>
+            <div class="scale">
                 
             </div>
-            <div class="vertical">
+            <div class="scale vertical">
                 
             </div>
-            <div class="horizontal">
+            <div class="scale horizontal" style="background-color: rgba(67, 84, 117, 0.5);">
+                <div class="tile-content">
+                    <div class="content one">
+                        <i class="fas fa-laptop-code" ></i>
+                        <h1 class="bodycontent">Skills</h1>
+                    </div>
+                    <div class="content two">
+                        <h1 class="bodycontent">Secondary Content</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="scale big">
                 
             </div>
-            <div class="vertical">
+            <div class="scale">
                 
             </div>
-            <div>
+            <div class="scale">
                 
             </div>
-            <div class="vertical">
+            <div class="scale">
                 
             </div>
-            <div>
+            <div class="scale horizontal" style="background-color: rgba(221, 149, 54, 0.5);">
+                <div class="tile-content">
+                    <div class="content one">
+                        <i class="fas fa-trophy"></i>
+                        <h1 class="bodycontent">Achivements</h1>
+                    </div>
+                    <div class="content two">
+                        <h1 class="bodycontent">Secondary Content</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="scale">
                 
             </div>
-            <div>
+            <div class="scale horizontal" style="background-color: rgb(162 56 56 / 50%);">
+                <div class="tile-content">
+                    <div class="content one">
+                        <i class="fas fa-briefcase"></i>
+                        <h1 class="bodycontent">Experiences</h1>
+                    </div>
+                    <div class="content two">
+                        <h1 class="bodycontent">Secondary Content</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="scale">
                 
             </div>
-            <div class="horizontal">
-                
-            </div>
-            <div>
-                
+            <div class="scale horizontal" style="background-color: rgba(65, 173, 98, 0.5);">
+                <div class="tile-content">
+                    <div class="content one">
+                        <i class="fas fa-project-diagram"></i>
+                        <h1 class="bodycontent">Projects</h1>
+                    </div>
+                    <div class="content two">
+                        <h1 class="bodycontent">Secondary Content</h1>
+                    </div>
+                </div>
             </div>
         </div>
         <div style="margin-top: 4rem;margin-bottom: 4rem;" class="container-gallery">
-            <div >
+            <div class="scale">
                 
             </div>
-            <div class="horizontal">
+            <div class="scale horizontal"  style="background-color: rgba(57, 148, 140, 0.5);">
+                <div class="tile-content">
+                    <div class="content one">
+                        <i class="fas fa-bullseye"></i>
+                        <h1 class="bodycontent">Life Goals</h1>
+                    </div>
+                    <div class="content two">
+                        <h1 class="bodycontent">Secondary Content</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="scale">
                 
             </div>
-            <div>
-                
+            <div class="scale horizontal" style="background-color: rgba(92, 52, 107, 0.5);">
+                <div class="tile-content">
+                    <div class="content one">
+                        <i class="fas fa-id-badge"></i>
+                        <h1 class="bodycontent">Contact</h1>
+                    </div>
+                    <div class="content two">
+                        <h1 class="bodycontent">Secondary Content</h1>
+                    </div>
+                </div>
             </div>
-            <div class="horizontal">
-                
-            </div>
-            <div>
+            <div class="scale">
                 
             </div>
         </div>
@@ -136,9 +199,13 @@
             document.getElementById("demo").innerHTML = vars[num];
         }
         today();
-        document.addEventListener('contextmenu', function(e) {
+        /*document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
-        });
+        });*/
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
     </script>
 </body>
 

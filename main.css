@@ -265,7 +265,6 @@ body .icon .day {
   color: white;
   font: normal 20px 'Montserrat', sans-serif;
   float: right;
-  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 450px) {
@@ -317,24 +316,24 @@ body .container-gallery .big {
 body .container-gallery div {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
           backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(67, 84, 117, 0.5);
+  background-color: rgba(48, 50, 56, 0.5);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   -webkit-box-shadow: 0px 0px 5px 0px #858383;
           box-shadow: 0px 0px 5px 0px #858383;
 }
 
-body .container-gallery div:hover {
+body .container-gallery .scale:hover {
   border: solid 2px white;
   -webkit-transition: all 0.8s cubic-bezier(0.25, 0.1, 0.69, 0.98);
   transition: all 0.8s cubic-bezier(0.25, 0.1, 0.69, 0.98);
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   z-index: 2;
 }
 
 @media only screen and (max-width: 620px) {
-  body .container-gallery div:hover {
+  body .container-gallery .scale:hover {
     -webkit-transform: scale(1.06);
             transform: scale(1.06);
   }
@@ -383,6 +382,81 @@ body .container-gallery img.fadeimg {
   }
 }
 
+body .container-gallery .tile-content .content {
+  -webkit-transition: top ease 0.5s 0.1s;
+  transition: top ease 0.5s 0.1s;
+}
+
+body .container-gallery .tile-content {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+body .container-gallery .tile-content .content {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+body .container-gallery .tile-content .content.one {
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container-gallery .tile-content .content.two {
+  top: 100%;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body .container-gallery .tile-content:hover .content.one {
+  top: -100%;
+}
+
+body .container-gallery .tile-content:hover .content.two {
+  top: 0;
+}
+
+body .container-gallery .bodycontent {
+  color: white;
+  font: normal 25px 'Montserrat', sans-serif;
+  margin-top: 1rem;
+  text-align: center;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -394,6 +468,66 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+body i {
+  font-size: 3rem;
+  color: white;
+  margin: auto;
+  margin-bottom: 0;
+  text-shadow: 0 0 4px white;
+}
+
+body .fa-cog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body .fa-cog:before {
+  position: absolute;
+  font-size: 5rem;
+  top: 0px;
+  -webkit-animation: logo-rotating 20s linear infinite;
+          animation: logo-rotating 20s linear infinite;
+}
+
+@-webkit-keyframes logo-rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes logo-rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 450px) {

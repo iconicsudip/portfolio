@@ -196,7 +196,6 @@ body{
         color: white;
         font: normal 20px 'Montserrat', sans-serif;
         float: right;
-        margin-top: 1rem;
       }
       @media only screen and (max-width:450px){
         .logo{
@@ -236,23 +235,22 @@ body{
         }
         div{
             backdrop-filter: blur(16px) saturate(180%);
-            background-color: rgba(67, 84, 117, 0.5);
+            background-color: rgba(48, 50, 56, 0.5);
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.125);
             box-shadow: 0px 0px 5px 0px #858383;
-            &:hover{
-              border: solid 2px white;
-              transition: all 0.8s cubic-bezier(0.25, 0.1, 0.69, 0.98);
-              transform: scale(1.2);
-              z-index: 2;
-            }
         }
+        .scale:hover{
+          border: solid 2px white;
+          transition: all 0.8s cubic-bezier(0.25, 0.1, 0.69, 0.98);
+          transform: scale(1.1);
+          z-index: 2;
+        }
+        
         @media only screen and (max-width:620px){
-          div{
-              &:hover{
+          .scale:hover{
                 transform: scale(1.06);
               }
-          }
         }
         img.fadeimg{
           width: -webkit-fill-available;
@@ -276,6 +274,59 @@ body{
             opacity: 0;
           }
         }
+        .tile-content .content {
+          transition: top ease 0.5s 0.1s;
+        }
+        .tile-content{
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: relative;
+          overflow:hidden;
+          background-color: transparent;
+          }
+        .tile-content .content{
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          }
+        .tile-content .content.one{
+            top: 0;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background:transparent;
+            border: none;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+          }
+        .tile-content .content.two {
+            top:100%;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background:transparent;
+            border: none;
+            box-shadow: none;
+          }
+        .tile-content:hover .content.one {
+          top: -100%;
+        }
+        .tile-content:hover .content.two {
+          top: 0;
+        }
+        .bodycontent{
+          color: white;
+          font: normal 25px 'Montserrat', sans-serif;
+          margin-top: 1rem;
+          text-align: center;
+        }
     }
     &::before{
       content: "";
@@ -289,7 +340,37 @@ body{
       right: 0;
       bottom: 0;
     }
-
+    i{
+      font-size: 3rem;
+      color: white;
+      margin: auto;
+      margin-bottom: 0;
+      text-shadow: 0 0 4px white;
+    }
+    .fa-cog{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      position: absolute;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .fa-cog:before {
+      position: absolute;
+      font-size: 5rem;
+      top: 0px;
+      animation: logo-rotating 20s linear infinite;
+    }
+    @keyframes logo-rotating {
+      from {
+              transform: rotate(0deg);
+      }
+      to {
+              transform: rotate(360deg);
+      }
+  }
   
 }
 @media only screen and (max-width:450px){
