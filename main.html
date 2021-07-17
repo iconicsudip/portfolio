@@ -199,9 +199,9 @@
             document.getElementById("demo").innerHTML = vars[num];
         }
         today();
-        /*document.addEventListener('contextmenu', function(e) {
+        document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
-        });*/
+        });
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
