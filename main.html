@@ -18,15 +18,14 @@
     <title>Sudip Das - Portfolio</title>
 </head>
 
-<body oncontextmenu="return false">
-    <div class='loader' style="display: none;">
+<body onload="loadingFunc()">
+    <div class='loader'>
         <div class='circle'></div>
         <div class='circle'></div>
         <div class='circle'></div>
         <div class='circle'></div>
         <div class='circle'></div>
     </div>
-      
     <div class="container" >
         <h1 class="start">Start</h1>
         <div class="icon">
@@ -199,7 +198,7 @@
             document.getElementById("demo").innerHTML = vars[num];
         }
         today();
-        document.addEventListener('contextmenu', function(e) {
+        /*document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
         document.onkeydown = function(e) {
@@ -218,11 +217,15 @@
             if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
                 return false;
             }
-            }
+        }*/
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
+        var preload = document.getElementsByClassName("loader")[0];
+        function loadingFunc(){
+            preload.style.display = 'none';
+        }
     </script>
 </body>
 
